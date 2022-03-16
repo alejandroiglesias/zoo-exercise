@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Bearpaw Regular';
+    src: url('BEARPAW_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-bearpaw-regular {
+  font-family: Bearpaw Regular;
+}
