@@ -42,7 +42,7 @@
                 @click="$store.app.setSelectedAnimal(animal)"
               >
                 <div class="grow flex items-center">
-                  <img :src="'images/animal-' + animal.name + '.png'" alt="" />
+                  <img :src="`images/animal-${animal.name.toLowerCase()}.png`" alt="" />
                 </div>
                 <figcaption class="font-rubik" x-text="animal.name"></figcaption>
               </figure>
