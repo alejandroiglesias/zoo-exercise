@@ -1,0 +1,21 @@
+{
+  "name": "zoo-exercise",
+  "version": "1.0.0",
+  "description": "Exercise using a minimalistic Alpine.js + Tailwind frontend stack.",
+  "scripts": {
+    "start": "npx live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandroiglesias/zoo-exercise.git"
+  },
+  "author": "Alejandro García Iglesias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandroiglesias/zoo-exercise/issues"
+  },
+  "homepage": "https://github.com/alejandroiglesias/zoo-exercise#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
