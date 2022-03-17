@@ -1,28 +1,29 @@
+import { Animal, Cat, Chicken, Cow, Dog, Duck } from './modules/animals/index.js'
+
+import Alpine from 'https://cdn.jsdelivr.net/npm/alpinejs@3.9.1/dist/module.esm.js'
+
 document.addEventListener('alpine:init', () => {
   Alpine.store('app', {
     animals: [
-      { name: 'Cat', sound: 'miaow' },
-      { name: 'Chicken', sound: 'cluck' },
-      { name: 'Cow', sound: 'moo' },
-      { name: 'Dog', sound: 'woof' },
-      { name: 'Duck', sound: 'cuack' },
-      { name: 'Lion', sound: 'roar' },
+      new Cat(),
+      new Chicken(),
+      new Cow(),
+      new Dog(),
+      new Duck(),
+      new Animal({ name: 'Lion', sound: 'roar' }) // Custom animal
     ],
     message: '',
     selectedAnimal: null,
 
-    // Returns message enhanced with animal sound
     getMessage() {
       if (!this.selectedAnimal || !this.message) return
-      return this.message
-        .trim()
-        .split(' ')
-        .reduce((prev, curr) => `${prev} ${curr} ${this.selectedAnimal.sound}`, '')
+      return this.selectedAnimal.speak(this.message)
     },
 
-    // Helper to set selectedAnimal
     setSelectedAnimal(animal) {
       this.selectedAnimal = animal
     }
   })
 })
+
+Alpine.start()
